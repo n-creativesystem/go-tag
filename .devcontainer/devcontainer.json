@@ -1,0 +1,21 @@
+{
+    "name": "go-tag-dev",
+    "dockerComposeFile": [
+        "../docker-compose.yaml",
+    ],
+    "service": "go-tag-dev",
+    "workspaceFolder": "/src",
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "golang.Go",
+        "yokoe.vscode-postfix-go",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "christian-kohler.path-intellisense",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}

@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  go-tag-dev:
+    build:
+      dockerfile: .devcontainer/Dockerfile
+      context: .
+    tty: true
+    volumes:
+      - ./:/src/:delegated
+      - ~/.ssh:/root/.ssh
+      - ~/.gitconfig:/root/.gitconfig
+    container_name: go-tag-dev
+    environment:
+      TZ: Asia/Tokyo
