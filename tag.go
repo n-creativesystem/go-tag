@@ -34,9 +34,11 @@ type Tag struct {
 }
 
 type StructTag struct {
-	Name  string
-	Field reflect.Value
-	Tags  []Tag
+	Spec     interface{}
+	Name     string
+	Field    reflect.Value
+	TypField reflect.StructField
+	Tags     []Tag
 }
 
 // New is spec is pointer struct
@@ -55,9 +57,11 @@ func New(spec interface{}) ([]StructTag, error) {
 		field := s.Field(i)
 		fType := rTyp.Field(i)
 		strTag := StructTag{
-			Name:  fType.Name,
-			Field: field,
-			Tags:  []Tag{},
+			Spec:     spec,
+			Name:     fType.Name,
+			Field:    field,
+			TypField: fType,
+			Tags:     []Tag{},
 		}
 		for _, tag := range tags {
 			value := fType.Tag.Get(tag)
