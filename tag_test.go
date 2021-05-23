@@ -3,7 +3,7 @@ package tag_test
 import (
 	"testing"
 
-	"github.com/oidc-proxy-ecosystem/go-tag"
+	"github.com/n-creativesystem/go-tag"
 	"github.com/stretchr/testify/assert"
 )
 
