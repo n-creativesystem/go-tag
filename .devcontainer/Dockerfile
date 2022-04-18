@@ -1,4 +1,4 @@
-FROM golang:1.16-buster
+FROM golang:1.18.1-buster
 ENV TZ=Asia/Tokyo
 
 RUN apt-get update \
